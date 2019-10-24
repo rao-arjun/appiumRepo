@@ -27,8 +27,16 @@
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-firefox-driver</artifactId>
         <version>3.141.59</version>
+        <scope>test</scope>
     </dependency>  
     
+    <dependency>
+	    <groupId>io.appium</groupId>
+	    <artifactId>java-client</artifactId>
+	    <version>6.1.0</version>
+	    <scope>test</scope>
+	</dependency>
+	
 	<dependency>
 	    <groupId>org.testng</groupId>
 	    <artifactId>testng</artifactId>
@@ -36,5 +44,12 @@
 	    <scope>test</scope>
 	</dependency>
 	
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>4.2.0</version>  
+	    <scope>test</scope> 
+	</dependency>
+
   </dependencies>
 </project>
