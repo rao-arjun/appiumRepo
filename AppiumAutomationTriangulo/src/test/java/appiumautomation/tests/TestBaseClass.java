@@ -17,11 +17,14 @@ public class TestBaseClass {
 	private final String appiumServerURL = "http://127.0.0.1:4723/wd/hub";
 	private final String platformName = "Android";
 	private final String appLocation = "src//test//resources//FasTip.apk";
-	
+	private final String deviceName = "emulator-5554";
+	private final String automationName= "UiAutomator2";
+	private final String platformVersion= "8.0";
+
 	protected AppLandingPage appLandingPage;
 	
 	@BeforeClass
-	public void launchApp(String platformVersion, String deviceName, String automationName){	
+	public void launchApp(){	
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(MobileCapabilityType.PLATFORM_NAME, platformName);
 		dc.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
@@ -31,6 +34,7 @@ public class TestBaseClass {
 		
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL(appiumServerURL), dc);
+			this.appLandingPage = new AppLandingPage(driver);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

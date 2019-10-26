@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Functional Tests for Fastip App">
+    <classes>
+      <class name="appiumautomation.tests.FunctionalTests.java"/>
+      	<methods>
+      		<include name="verifySuccessfullLaunchOfApp"/>
+      		<include name="verifyNavigationToTipSettingsPage"/>
+      		<include name="updateTipFromSettings"/>
+      		<include name="tipCalculationForBillAmount"/>
+      	</methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

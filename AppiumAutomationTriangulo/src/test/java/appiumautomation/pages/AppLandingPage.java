@@ -42,6 +42,8 @@ public class AppLandingPage {
 	}
 	
 	public String getTipTotalAmount(){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(totalAmount)));
 		return driver.findElement(totalAmount).getText();
 	}
 	
