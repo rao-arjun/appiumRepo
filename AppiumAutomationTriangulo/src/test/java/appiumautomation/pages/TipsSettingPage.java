@@ -14,6 +14,7 @@ public class TipsSettingPage {
 	private By settingsSection = By.id("android:id/action_bar_title");
 	private By setTipPercentageTextBox = By.id("org.traeg.fastip:id/tipPercentageEditText");
 	private By submitTipSettingsButton = By.id("org.traeg.fastip:id/saveSettingsButton");
+	private By homePageLogoButton = By.id("android:id/home");
 	
 	public TipsSettingPage(AndroidDriver<MobileElement> driver) {
 		// TODO Auto-generated constructor stub
@@ -21,8 +22,8 @@ public class TipsSettingPage {
 	}
 	
 	public String headerOfPage (){
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(settingsSection)));
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(settingsSection));
 		return driver.findElement(settingsSection).getText();
 	}
 	
@@ -32,4 +33,5 @@ public class TipsSettingPage {
 		driver.findElement(submitTipSettingsButton).click();
 		return new AppLandingPage(driver);
 	}
+	
 }

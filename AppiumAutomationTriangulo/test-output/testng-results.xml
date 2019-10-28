@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="38031" started-at="2019-10-28T11:00:47Z" finished-at="2019-10-28T11:01:25Z">
+    <groups>
+    </groups>
+    <test name="Functional Tests for Fastip App" duration-ms="38031" started-at="2019-10-28T11:00:47Z" finished-at="2019-10-28T11:01:25Z">
+      <class name="appiumautomation.tests.FunctionalTests">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="launchApp" is-config="true" duration-ms="23967" started-at="2019-10-28T16:30:47Z" finished-at="2019-10-28T16:31:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="verifySuccessfullLaunchOfApp()[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="verifySuccessfullLaunchOfApp" duration-ms="269" started-at="2019-10-28T16:31:11Z" finished-at="2019-10-28T16:31:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfullLaunchOfApp -->
+        <test-method status="PASS" signature="verifyNavigationToTipSettingsPage()[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="verifyNavigationToTipSettingsPage" duration-ms="2177" started-at="2019-10-28T16:31:11Z" depends-on-methods="appiumautomation.tests.FunctionalTests.verifySuccessfullLaunchOfApp" finished-at="2019-10-28T16:31:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigationToTipSettingsPage -->
+        <test-method status="PASS" signature="setTipPercentageInSettingsPage()[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="setTipPercentageInSettingsPage" duration-ms="2953" started-at="2019-10-28T16:31:13Z" depends-on-methods="appiumautomation.tests.FunctionalTests.verifyNavigationToTipSettingsPage" finished-at="2019-10-28T16:31:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setTipPercentageInSettingsPage -->
+        <test-method status="PASS" signature="totalBillAmountWithTip(double, java.lang.String)[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="totalBillAmountWithTip" duration-ms="2537" started-at="2019-10-28T16:31:16Z" data-provider="testDataForBillAmountCalculation" depends-on-methods="appiumautomation.tests.FunctionalTests.setTipPercentageInSettingsPage" finished-at="2019-10-28T16:31:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$120.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalBillAmountWithTip -->
+        <test-method status="PASS" signature="totalBillAmountWithTip(double, java.lang.String)[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="totalBillAmountWithTip" duration-ms="2393" started-at="2019-10-28T16:31:19Z" data-provider="testDataForBillAmountCalculation" depends-on-methods="appiumautomation.tests.FunctionalTests.setTipPercentageInSettingsPage" finished-at="2019-10-28T16:31:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$60.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalBillAmountWithTip -->
+        <test-method status="PASS" signature="totalBillAmountWithTip(double, java.lang.String)[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="totalBillAmountWithTip" duration-ms="2392" started-at="2019-10-28T16:31:21Z" data-provider="testDataForBillAmountCalculation" depends-on-methods="appiumautomation.tests.FunctionalTests.setTipPercentageInSettingsPage" finished-at="2019-10-28T16:31:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25.5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$30.60]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalBillAmountWithTip -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:appiumautomation.tests.FunctionalTests@27f674d]" name="teardown" is-config="true" duration-ms="1309" started-at="2019-10-28T16:31:23Z" finished-at="2019-10-28T16:31:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- appiumautomation.tests.FunctionalTests -->
+    </test> <!-- Functional Tests for Fastip App -->
+  </suite> <!-- Suite -->
+</testng-results>

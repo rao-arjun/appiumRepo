@@ -16,12 +16,12 @@ public class TestBaseClass {
 	private AndroidDriver<MobileElement> driver;
 	private final String appiumServerURL = "http://127.0.0.1:4723/wd/hub";
 	private final String platformName = "Android";
-	private final String appLocation = "src//test//resources//FasTip.apk";
+	private final String appLocation = System.getProperty("user.dir")+"\\src\\test\\resources\\FasTip.apk";
 	private final String deviceName = "emulator-5554";
 	private final String automationName= "UiAutomator2";
 	private final String platformVersion= "8.0";
 
-	protected AppLandingPage appLandingPage;
+	protected static AppLandingPage appLandingPage;
 	
 	@BeforeClass
 	public void launchApp(){	
@@ -31,7 +31,7 @@ public class TestBaseClass {
 		dc.setCapability(MobileCapabilityType.APP, appLocation);
 		dc.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, automationName);
-		
+		dc.setCapability(MobileCapabilityType.FULL_RESET, true);
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL(appiumServerURL), dc);
 			this.appLandingPage = new AppLandingPage(driver);

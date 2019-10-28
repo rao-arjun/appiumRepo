@@ -24,8 +24,7 @@ public class AppLandingPage {
 	}
 	
 	public String fastipLogoText(){
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(fastipLog)));
+		synchronizePage();
 		return driver.findElement(fastipLog).getText();
 	}
 	public TipsSettingPage goToTipsSettingsPage(){
@@ -34,6 +33,7 @@ public class AppLandingPage {
 	}
 	
 	public String getTipPercentage(){
+		synchronizePage();
 		return driver.findElement(tipPercentage).getText();
 	}
 	
@@ -42,8 +42,7 @@ public class AppLandingPage {
 	}
 	
 	public String getTipTotalAmount(){
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(totalAmount)));
+		synchronizePage();
 		return driver.findElement(totalAmount).getText();
 	}
 	
@@ -51,5 +50,10 @@ public class AppLandingPage {
 		driver.findElement(billAmountTextBox).clear();
 		driver.findElement(billAmountTextBox).sendKeys(Double.toString(billAmount));
 		driver.findElement(calculateTipButton).click();
+	}
+	
+	private void synchronizePage(){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(fastipLog));
 	}
 }

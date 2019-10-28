@@ -1,14 +1,13 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
   <test name="Functional Tests for Fastip App">
     <classes>
-      <class name="appiumautomation.tests.FunctionalTests.java"/>
+      <class name="appiumautomation.tests.FunctionalTests"/>
       	<methods>
       		<include name="verifySuccessfullLaunchOfApp"/>
       		<include name="verifyNavigationToTipSettingsPage"/>
-      		<include name="updateTipFromSettings"/>
-      		<include name="tipCalculationForBillAmount"/>
+      		<include name="setTipPercentageInSettingsPage"/>
+      		<include name="totalBillAmountWithTip"/>
       	</methods>
     </classes>
   </test> <!-- Test -->
